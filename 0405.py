@@ -120,7 +120,7 @@ print("완전바깥. else밖의 문구 : for 문 종료됨")
 while 조건 :
     수행문1
 else:
-    수행문2"""
+    수행문2
 
 #sum,0부터 10까지의 숫자를 찍음
 # sum 을 구할것임
@@ -136,7 +136,29 @@ print("while 밖에서 sum의 값 : 0",sum  )
 while 0:
     print("실행이 되지 않음")
 print("while 0 다음 줄입니다.")
-while True :
-    print("무한루프")
+#while True :
+    #print("무한루프")
 while False:
-    print("실행이 되지 않음")
+    print("실행이 되지 않음")"""
+
+#break continue
+# 단어 입력을 무한루프로 받지만 exit를 입력하면 종료되는 루프
+#단어를 입력받으면 그걸 3번 써줌
+#"apple" -> 3번 안씀
+
+while True :
+    word =input("단어를 입력하세요 >")
+    
+    
+    if word =="exit" :
+        print("exit를 입력하여 break를 만나 루프를 종료합니다.")
+        break
+    elif word =="apple":
+        print("apple을 입력함. continue 만")
+        print(word)
+        continue
+        print("컨티뉴 뒤의 문장")
+    else :
+        for i in range(3):
+            print(word,end=' ')
+        print("해당 단어 끝")
