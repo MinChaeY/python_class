@@ -35,7 +35,7 @@ print(lst)
 lst.insert(0,"서브웨이")
 print(lst)
 print("리스트에서 3번째에 있는 값을 출력합니다: ", lst[2])
-lst.append("해장국","감자탕")
+#lst.append("해장국","감자탕") #오류 발생, 한개씩만 더하기 가능
 
 #점심메뉴 출력하기
 for i in range(len(lst)):
@@ -58,3 +58,56 @@ lst[0,10,1] : 0~(10-1),step수만큼 뛰어 넘어라.
 print(lst[::]) #전체 출력
 print(lst[0:len(lst):1])
 print(lst[0:8:2])
+print(lst[3:7:1])
+print(lst[::-1])
+print(lst[0:6:3])
+
+lst.append("김밥")
+lst.append("라볶이")
+lst.append("김밥")
+print(lst)
+lst.remove("김밥")
+print(lst)
+
+#lst.remove("커피") #커피가 리스트 안에 존재하지 않아 오류발생함
+lst.append("커피")
+item1="커피"
+if item1 in lst:
+        lst.remove(item1)
+        print("커피 존재함",lst)
+else:
+        print("커피 존재 안함",lst)
+
+print(lst)
+print("lst.pop():",lst.pop())
+print(lst)
+
+print("lst.pop():",lst.pop(0))
+print(lst)
+
+dessert =["케잌","커피","우유","와플"]
+print(dessert)
+lst.extend(dessert)
+
+print(lst)
+
+x="15"
+print(type(x))
+#x를 숫자로 변환. +1
+print(int(x)+1)
+print(type(x)) 
+
+#sort vs sorted
+l1=["orange","apple","mango","kiwi","banana"]
+print(l1)
+print(sorted(l1))
+print(l1)
+
+l1.reverse()
+print(l1)
+
+l1.clear()
+print(l1)
+
+del l1
+print(l1) #위에서 l1을 삭제했으므로 l1이 정의되지 않아 오류 발생함
