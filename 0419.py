@@ -101,3 +101,57 @@ print(month.pop("a")) #지정한 값 삭제
 print(month)
 print(month.popitem())  #마지막 값 삭제
 print(month)
+
+#zip(),enumerate()
+'''
+l1=[1,2,3,4,5]
+l2=['a','b','c','d','e']
+l3=[9,8,7,6,5]
+zip(l1,l2,l3)'''
+
+l1=['한식','중식','일식']
+l2=['전주식당','전가복','초밥집']
+l3=['제육','탕수육','연어초밥']
+
+z= zip(l1,l2,l3)
+print(type(z))
+print(z)
+print(list(z))
+
+z1=zip(l1,l2)
+#print(list(z1))
+print(dict(z1))
+#z2=zip(l1,l2,l3)  #딕셔너리는 2개가 있어야하는데 3개가 존재해 에러 발생
+#print(dict(z2))
+
+z2= zip(l1,zip(l2,l3))
+print(dict(z2))
+
+#enumerate() 사용
+
+l4=['제육','탕수육','연어덮밥']
+print(enumerate(l4))
+print(list(enumerate(l4)))
+print(dict(enumerate(l4)))
+
+#문제
+#과목을 주면 강의실을 알려주는 함수
+subject =['파이썬','자바','c++','AI','알고리즘']
+classroom =['101호','102호','103호','104호''105호']
+#0)과목명을 입력받는다.
+#1)dictionary로 변환해서 활용
+#2)무한루프로 강의실을 알려줘라
+#3)quit 이ㄹ는 단어가 들어오면, 강의실 알려주는 시스템을 종료해라
+#4)다른 과목을 물어보면 "몰라요" 다시 과목명 물어보는 것으로 돌아가라
+study=dict(zip(subject,classroom))
+while 1 :
+    a=input("강의실을 찾을 과목명을 입력하십시오. >>")
+    b=0
+    if a=='quit':
+        print("종료하겠습니다.")
+        break
+    if a in study.keys():
+        print("강의실은 ", study[b])
+    else:
+        print("과목명을 잘못 입력했습니다")
+        continue
