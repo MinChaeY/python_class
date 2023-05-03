@@ -135,3 +135,22 @@ def positive(n):
 print(list(filter(positive,[10,2,-3,5,-9])))
 
 print(list(filter(lambda x: x>0,[10,2,-3,5,-9])))
+
+def is_even(x):
+    if x%2==0:
+        return True
+    else:
+        return False
+#for 반복문 이용
+arr1=[]
+for val in range(1,11):
+    if is_even(val):
+        arr1.append(val)
+
+print(f"arr function : {arr1}")
+
+#filter 함수 이용
+print(list(filter(is_even,range(1,11))))
+#다른방법
+arr2=list(filter(is_even,range(1,11)))
+print(f"arr filter : {arr2}")
