@@ -15,3 +15,11 @@ print("m.pow(10,3) : ",m.pow(10,3))
 
 from math import pow as p #math 안에 있는 pow 함수를 p로 줄여쓴다.
 print(p(10,3))
+
+import ya
+print("============================")
+
+
+ya.helloya()
+
+print("__name in ya.py",__name__)
