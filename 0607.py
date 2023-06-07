@@ -77,7 +77,7 @@ filter 와 lambda를 사용하여 리스트 [1,-2,3,-5,8,-3]에서 음수를 모
 map,filter
 map(함수,input list )=>리스트
 map(addone,[0,1,2]) => [addone(0),addone(1),addone(2)]
-filter(func,[10,20,30])=>[10,30]'''
+filter(func,[10,20,30])=>[10,30]
 
 def positive1(x):
     return x>0
@@ -94,4 +94,10 @@ list1=[10,20,30,40,50]
 list2=[100,200,300,400,500]
 
 print(list(map(lambda x:x[0]+x[1],list(zip(list1,list2)))))
+'''
 
+#9 module
+
+import random
+#이부분 중요
+#__name__ => 여러개의 파이썬 코드가 존재할 때 실제로 메인이 되는 파이썬 코드
